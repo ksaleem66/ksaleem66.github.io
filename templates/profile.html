@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+<body>
+    <div class="container">
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+        <div class="profile-card">
+            <h1>Student Profile</h1>
+            <div id="user-info"></div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>Total XP</h3>
+                    <div id="xp-total" class="stat-value">Loading...</div>
+                </div>
+                <div class="stat-item">
+                    <h3>Grades</h3>
+                    <div id="avg-grade" class="stat-value">Loading...</div>
+                </div>
+                <!--<div class="stat-item">
+                    <h3>Completed (Projects/Piscine/Checkpoints)</h3>
+                    <div id="projects-completed" class="stat-value">Loading...</div>
+                </div>-->
+                <div class="stat-item">
+                    <h3>Audits Done/Received</h3>
+                    <div id="audit-done" class="stat-value">Loading...</div>
+                </div>
+                <!--<div class="stat-item">
+                    <h3>Audit Ratio</h3>
+                    <div id="audit-ratio" class="stat-value">Loading...</div>
+                </div>-->
+            </div>
+        </div>
+        <div class="graphs-container">
+            <div class="graph">
+                <h2>XP Progress Over Time</h2>
+                <svg id="xp-graph" width="100%" height="300"></svg>
+            </div>
+            <!--<div class="graph">
+                <h2>Project Success Rate</h2>
+                <svg id="project-graph" width="100%" height="300"></svg>
+            </div>-->
+            <div class="graph">
+                <h2>XP By Project</h2>
+                <svg id="project-graph" width="100%" height="300"></svg>
+            </div>
+            <div class="graph">
+                <h2>Audit Ratio</h2>
+                <svg id="audit-graph" width="100%" height="300"></svg>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/profile.js"></script>
+</body>
+</html>
