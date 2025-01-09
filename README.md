@@ -106,4 +106,5 @@ This project designed by :
 
 ## How to Run Graphql App from Github:
 
-Fire up a browser and go to https://ksaleem66.github.io
+- Fire up a browser and go to https://ksaleem66.github.io
+- Login with your Email or Username and password of your Reboot01 platform
