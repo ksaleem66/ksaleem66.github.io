@@ -115,6 +115,18 @@ function displayUserData(result) {
     // Audit Done/Received
     document.getElementById('audit-done').textContent = auditDone + "/" + auditReceived;
 
+    // Audit Ratio
+    //const auditR = Math.round(user.auditRatio).toFixed(1);
+    const auditR = Math.round(user.auditRatio);
+    //document.getElementById('audit-ratio').textContent = Math.round(user.auditRatio).toFixed(1);
+    document.getElementById('audit-ratio').textContent = (user.auditRatio).toFixed(1);
+    //auditMsg = ""
+    // if (auditR <= 1) {
+    //     auditMsg = "You can do better!"
+    // }
+    // document.getElementById('audit-ratio').textContent = auditR + " " + auditMsg;
+   
+
     // Create graphs
     createXPGraph(transactions);
     createProjectGraph(transactions);
@@ -193,11 +205,9 @@ function createXPGraph(transactions) {
     xAxisLine.setAttribute('y2', height);
     xAxisLine.setAttribute('stroke', 'black');
 
-
     // Create axes
     const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     xAxis.setAttribute('transform', `translate(0,${height})`); // Move x-axis to bottom
-
 
     // Add ticks and labels
     const xTicks = 5;
