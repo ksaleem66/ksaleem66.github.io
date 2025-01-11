@@ -90,6 +90,7 @@ function displayUserData(result) {
     const user = result.data.user[0];
     const transactions = result.data.transaction;
     const progress = result.data.progress;
+    const res = result.data.results
 
     const auditDone = result.data.up_transactions.length;
     const auditReceived = result.data.down_transactions.length;
@@ -128,13 +129,14 @@ function displayUserData(result) {
    
 
     // Create graphs
-    createXPGraph(transactions);
+    //createXPGraph(transactions);
+    createXPGraph(res);
     createProjectGraph(transactions);
     createAuditRatioGraph(auditDone, auditReceived);
 
 }
 
-function createXPGraph(transactions) {
+function createXPGraph(res) {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     const graphContainer = document.querySelector('.graphs-container div:first-child');
     graphContainer.innerHTML = '';
@@ -146,13 +148,13 @@ function createXPGraph(transactions) {
     svg.setAttribute('width', width + margin.left + margin.right);
     svg.setAttribute('height', height + margin.top + margin.bottom);
     
-    const sortedTransactions = transactions.sort((a, b) => 
+    const sortedTransactions = res.sort((a, b) => 
         new Date(a.createdAt) - new Date(b.createdAt)
     );
 
     let cumulativeXP = 0;
     const dataPoints = sortedTransactions.map(t => {
-        cumulativeXP += t.amount;
+        cumulativeXP += t.grade;
         return {
             date: new Date(t.createdAt),
             xp: cumulativeXP
