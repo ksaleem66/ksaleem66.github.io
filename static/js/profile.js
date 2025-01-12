@@ -277,7 +277,7 @@ function createXPGraph(res) {
 
     // Title
     const title = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    title.textContent = 'XP Progress Over Time';
+    title.textContent = 'Progress Over Time';
     title.setAttribute('x', width / 2);
     title.setAttribute('y', -10);
     title.setAttribute('text-anchor', 'middle');
