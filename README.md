@@ -49,7 +49,7 @@ When making GraphQL queries, you'll supply the JWT using Bearer authentication. 
 
 Besides the creation of your own profile you will have to host it. There are several places where you can host your profile, for example: github-pages, netlify and so on. You are free to choose the hosting place.
 
-- This project of Graphql Student Profile is hosted on github-pages.
+- This project of Graphql Student Profile is hosted on github-pages
 
 #### Logic for gathering data:
 - Total XP:
