@@ -1,6 +1,6 @@
 # Graphql
 
-#### Project Description
+#### Project Objectives
 
 The objective of this project is to learn the GraphQL query language, by creating your own profile page.
 
@@ -49,6 +49,7 @@ When making GraphQL queries, you'll supply the JWT using Bearer authentication. 
 
 Besides the creation of your own profile you will have to host it. There are several places where you can host your profile, for example: github-pages, netlify and so on. You are free to choose the hosting place.
 
+- This project of Graphql Student Profile is hosted on github-pages.
 
 #### Logic for gathering data:
 - Total XP:
@@ -97,6 +98,15 @@ Besides the creation of your own profile you will have to host it. There are sev
             objectId
             path
         }
+
+- Audits Ratio:
+    user {
+                id
+                login
+                attrs
+                auditRatio
+                createdAt
+            }
         
 ## Authors
 
@@ -107,4 +117,5 @@ This project designed by :
 ## How to Run Graphql App from Github:
 
 - Fire up a browser and go to https://ksaleem66.github.io
+
 - Login with your Email or Username and password of your Reboot01 platform
